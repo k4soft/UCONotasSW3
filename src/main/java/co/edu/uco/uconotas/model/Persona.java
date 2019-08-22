@@ -1,4 +1,4 @@
-package co.edu.uco.uconotas.domain;
+package co.edu.uco.uconotas.model;
 
 public class Persona {
 
