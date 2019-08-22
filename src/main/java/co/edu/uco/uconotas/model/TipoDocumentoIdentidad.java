@@ -7,19 +7,5 @@ public class TipoDocumentoIdentidad {
     private String sigla;
     private boolean activo;
 
-    public Integer getId() {
-        return id;
-    }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public String getSigla() {
-        return sigla;
-    }
-
-    public boolean isActivo() {
-        return activo;
-    }
 }
