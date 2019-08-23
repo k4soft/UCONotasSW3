@@ -8,6 +8,9 @@ public class Nota {
     private List<SubNota> subnotas;
 
     public TipoNota getTipoNota() {
+        if(tipoNota == null){
+            tipoNota = new TipoNota();
+        }
         return tipoNota;
     }
 
