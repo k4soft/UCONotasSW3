@@ -4,20 +4,34 @@ import co.edu.uco.uconotas.model.TipoDocumentoIdentidad;
 import co.edu.uco.uconotas.model.TipoRol;
 import lombok.Data;
 
+import javax.persistence.*;
+import java.util.Date;
+
 
 @Data
+@Entity
+@Table(name = "persona")
 public class PersonaEntity {
 
-
+    @Id
+    @GeneratedValue
+    @Column(name="id")
     private Long id;
+    @Column(name="nombre")
     private String nombre;
+    @Column(name="apellido")
     private String apellido;
+    @ManyToOne
+    @JoinColumn(name ="iddocumentoidentidad")
     private TipoDocumentoIdentidad tipoDocumentoIdentidad;
+    @Column(name="nroDocumento")
     private String nroDocumento;
+    @Column(name="correo")
     private String correo;
+    @Column(name="telefono")
     private String telefono;
-    private TipoRol tipoRol;
-    private String fechaNacimiento;
+    @Column(name="fechaNacimiento")
+    private Date fechaNacimiento;
 
 
 }
