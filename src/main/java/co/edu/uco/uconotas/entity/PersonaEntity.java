@@ -22,8 +22,8 @@ public class PersonaEntity {
     @Column(name="apellido")
     private String apellido;
     @ManyToOne
-    @JoinColumn(name ="iddocumentoidentidad")
-    private TipoDocumentoIdentidad tipoDocumentoIdentidad;
+    @JoinColumn(name ="idDocumentoIdentidad")
+    private TipoDocumentoIdentidadEntity tipoDocumentoIdentidad;
     @Column(name="nroDocumento")
     private String nroDocumento;
     @Column(name="correo")
