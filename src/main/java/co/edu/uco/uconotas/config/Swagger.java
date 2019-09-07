@@ -19,7 +19,7 @@ public class Swagger {
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2).select()
                 .apis(RequestHandlerSelectors
-                        .basePackage("co.com.k4soft.apicalculadora.controller"))
+                        .basePackage("co.edu.uco.uconotas.controller"))
                 .paths(PathSelectors.regex("/.*"))
                 .build().apiInfo(apiEndPointsInfo());
     }
