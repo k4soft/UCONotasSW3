@@ -1,7 +1,5 @@
 package co.edu.uco.uconotas.entity;
 
-import co.edu.uco.uconotas.model.TipoDocumentoIdentidad;
-import co.edu.uco.uconotas.model.TipoRol;
 import lombok.Data;
 
 import javax.persistence.*;
