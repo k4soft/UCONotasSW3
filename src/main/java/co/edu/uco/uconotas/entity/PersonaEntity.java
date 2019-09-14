@@ -1,5 +1,6 @@
 package co.edu.uco.uconotas.entity;
 
+import co.edu.uco.uconotas.model.Persona;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -9,7 +10,7 @@ import java.util.Date;
 @Data
 @Entity
 @Table(name = "persona")
-public class PersonaEntity {
+public class PersonaEntity extends Persona {
 
     @Id
     @GeneratedValue

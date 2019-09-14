@@ -1,6 +1,7 @@
 package co.edu.uco.uconotas.controller;
 
 import co.edu.uco.uconotas.entity.PersonaEntity;
+import co.edu.uco.uconotas.model.Persona;
 import co.edu.uco.uconotas.service.persona.PersonaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -14,11 +15,11 @@ public class PersonaController {
     private PersonaService personaService;
 
     @GetMapping("/{id}/persona")
-    public PersonaEntity findById(@PathVariable(value = "id", required = true) Long id){
+    public Persona findById(@PathVariable(value = "id", required = true) Long id){
         return personaService.findById(id);
     }
     @GetMapping("/personas")
-    public List<PersonaEntity> findAll(){
+    public List<Persona> findAll(){
         return personaService.findAll();
     }
 
@@ -28,8 +29,8 @@ public class PersonaController {
     }
 
     @PostMapping("/persona")
-    public void insert(@RequestBody PersonaEntity personaEntity){
-        personaService.save(personaEntity);
+    public void insert(@RequestBody Persona persona){
+        personaService.save(persona);
     }
 
     @PutMapping("/{id}/persona")

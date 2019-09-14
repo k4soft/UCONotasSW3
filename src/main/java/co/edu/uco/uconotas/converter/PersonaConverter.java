@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Component
 public class PersonaConverter {
@@ -36,4 +37,15 @@ public class PersonaConverter {
         return personas;
     }
 
+    public Persona entityToModel(Optional<PersonaEntity> personaEntity) {
+        Persona persona = null;
+        if (personaEntity.isPresent()) {
+            persona = new Persona();
+            persona.setId(personaEntity.get().getId());
+            persona.setNombre(personaEntity.get().getNombre());
+            persona.setApellido(personaEntity.get().getApellido());
+            return persona;
+        }
+        return persona;
+    }
 }
