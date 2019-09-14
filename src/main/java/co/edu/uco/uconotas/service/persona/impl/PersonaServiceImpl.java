@@ -1,7 +1,6 @@
 package co.edu.uco.uconotas.service.persona.impl;
 
 import co.edu.uco.uconotas.entity.PersonaEntity;
-import co.edu.uco.uconotas.model.Persona;
 import co.edu.uco.uconotas.repository.PersonaRepository;
 import co.edu.uco.uconotas.service.persona.PersonaService;
 import org.springframework.beans.factory.annotation.Autowired;
