@@ -22,15 +22,14 @@ public class PersonaEntity extends Persona {
     private String apellido;
     @ManyToOne
     @JoinColumn(name ="idDocumentoIdentidad")
-    private TipoDocumentoIdentidadEntity tipoDocumentoIdentidad;
+    private TipoDocumentoIdentidadEntity tipoDocIdentidad;
     @Column(name="nroDocumento")
     private String nroDocumento;
     @Column(name="correo")
     private String correo;
     @Column(name="telefono")
     private String telefono;
-    @Column(name="fechaNacimiento")
-    private Date fechaNacimiento;
+
 
 
 }
